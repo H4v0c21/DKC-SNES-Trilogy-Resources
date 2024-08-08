@@ -1,0 +1,100 @@
+$10,x:
+Size: Word
+terrain tile attributes (slope steepness, flipped, semi-solid, damage player, etc)
+0x0100 means sprite is being crushed by castle crush floor
+
+
+$12,x:
+Size: Word
+
+Second half of OAM table data
+
+v: v-flip flag
+h: h-flip flag
+PP: priority (0-3)
+ppp: palette ID (0-7)
+n: name table ID (table 0 or table 1)
+aaaaaaaa: tile address
+
+vhPPpppnaaaaaaaa
+
+
+
+$1E,x:
+Size: Byte/Word
+
+Terrain interaction flags
+
+High byte is a 1 frame delayed mirror of low byte
+Low byte is set first then copied to high next frame
+
+The delayed mirror is used to detect is an event JUST happened, for example if the bit for touching the top of a tile is different between low and high we can tell if the sprite just left/landed on the ground
+
+t	touching top of tile
+s	touching side of tile
+c	touching bottom of tile/climbing on tile?
+
+p	touching platform sprite that can be stood on
+
+000p 0cst
+
+
+
+$2E,x:
+Size: Byte/Word
+
+Sprite state
+
+Used as an index into the state table of the sprite's main routine. Some sprites handle this as a 16 bit word while others use $2F,x as state and use this as a single byte sub state of $2F,x with an alternate table
+
+
+
+$2F,x:
+Size: Byte
+
+Sprite sub state
+
+Not always used but when it is it's passed back to sprite main and used in an alternate state table exclusive to the sprites current $2E,x state
+
+
+
+$30,x:
+Size: Word
+
+Sprite interaction flags
+
+bits	word	description
+00	0001	enable pickup by kong
+01	0002	enable terrain sprites
+02	0004	not found yet
+03	0008	enable grab hooks
+04	0010	enable damage from enemies
+05	0020	enable damage from thrown objects
+06	0040	not found yet
+07	0080	disable damage from enemies
+08	0100	unknown, most sprites have it
+09	0200	king zing stinger and squawks egg (only in king zing sting), cannonball to hurt kleever, kudgel tnt
+10	0400	not found yet
+11	0800	not found yet
+12	1000	not found yet
+13	2000	not found yet
+14	4000	not found yet
+15	8000	not found yet
+
+
+
+$32,x:
+Size: Word
+
+Carry flags/defeated flag
+
+word	description
+0000	none
+0001	put down
+0002	just released carry
+0003	not found yet
+0004	thrown forward
+0005	dropping from damage
+0006	thrown up
+
+if bit 8 (0x0100) is set then it defeats the sprite

@@ -1,0 +1,11 @@
+
+!null_pointer
+DATA_B69279	k_rool_phase_9_start
+DATA_B69241	k_rool_phase_8_start
+DATA_B691C7	k_rool_phase_7_start
+DATA_B691A7	k_rool_phase_6_start
+DATA_B69187	k_rool_phase_5_start
+DATA_B69163	k_rool_phase_4_start
+DATA_B6912F	k_rool_phase_3_start
+DATA_B69109	k_rool_phase_2_start
+DATA_B69097	k_rool_phase_1_start

@@ -1,0 +1,18 @@
+$05BB	referenced when disabling debug fly (setting to 0040 causes enemies to pause) bit 0 could have also been set during debug fly
+
+$0B02	state of squitters web platform projectile 0040 = flying, 0080 = stopped, 0000 = no web (probably has other uses related to player action)
+
+$0D7C	x distance from held object
+$0D7E	y distance from held object
+$0D80	set to FFFF when object is picked up
+
+$17B2	terrain collision routine pointer
+
+$19A2	last web shot time
+$19A4	last web platform shot time
+$19A6	number of web shots that current exist
+
+$19BA	number of enemies to defeat for destroy them all bonus (decrements when killing an enemy)
+
+$19C6	throw object x position?
+$19C8	throw object y position?

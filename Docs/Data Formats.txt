@@ -1,0 +1,36 @@
+8x8 Tile Map:
+
+t	tile
+p	palette
+P	priority
+H	h flip
+V	v flip
+
+vhPp pptt tttt tttt
+
+32x32 Tile Map:
+
+t	tile
+H	h flip
+V	v flip
+
+vh?t tttt tttt tttt
+
+Collision Tile Map:
+
+t	tile
+s	semi-solid
+d	damage
+h	h-flip
+
+DKC 1	hstt tttt
+DKC 2	hs00 000d 0ttt tttt
+DKC 3	hs00 000d 0ttt tttt
+
+Color:
+
+r	red channel
+g	green channel
+b	blue  channel
+
+0bbb bbgg gggr rrrr

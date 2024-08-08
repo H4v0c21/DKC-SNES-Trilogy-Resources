@@ -1,0 +1,10 @@
+v: v-flip flag
+h: h-flip flag
+PP: priority (0-3)
+ppp: palette ID (0-7)
+n: name table ID (table 0 or table 1)
+aaaaaaaa: tile address
+yyyyyyyy: tile y position
+xxxxxxxx: tile x position
+
+vhPPpppnaaaaaaaa yyyyyyyyxxxxxxxx

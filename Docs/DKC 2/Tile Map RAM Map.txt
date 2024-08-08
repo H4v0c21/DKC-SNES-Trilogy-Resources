@@ -1,0 +1,10 @@
+$17B6	level tilemap vram base address
+$17B8	current level scroll x position sub-pixel (low byte unused)
+$17BA	current level scroll x position pixel
+$17C0	current level scroll y position pixel
+$17C2	current level scroll y position pixel-1
+$17CA	current level scroll x position pixel (rounded to nearest 8x8 tile)
+$17CE	current level scroll y position pixel (rounded to nearest 8x8 tile)
+
+$17D2	how far the camera y scrolled relative to level scroll since last frame
+$17D6	how far the camera x scrolled relative to level scroll since last frame

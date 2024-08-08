@@ -1,0 +1,8 @@
+$A0	number of collision tiles the current level contains
+$A2	sprite x position on current level tile (takes into account if the tile is flipped)
+$A4	inverse of sprite y position rounded to the nearest 32x32 tile (used in combination with sprite x to generate offset into 32x32 tilemap to find what tile the sprite is standing on)
+$A6	sprite x position on current level tile (x & 0x1F)
+$A8	current 32x32 tile number that the sprite is on
+$AA	pointer to collision tile code
+$AC	current collision tile number that the sprite is on (might turn into slope steepness type later on)
+$AE	derived from $AC (appears to be the backup once $AC is messed with)

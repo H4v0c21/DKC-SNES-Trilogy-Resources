@@ -1,0 +1,29 @@
+spc_base_engine		= $04D8	;Starting ARAM location of SPC base engine
+spc_sound_engine	= $0560	;Starting ARAM location of SPC sound engine
+song_data 		= $1300	;Starting ARAM location of song data
+song_track_table	= $1312	;Starting ARAM location of song track table
+global_sfx_data		= $2410	;Starting ARAM location of global sound effect data
+global_sfx_table	= $2412	;Starting ARAM location of global sound effect table
+song_sfx_data		= $2E94	;Starting ARAM location of song-specific sound effect data
+song_sfx_table		= $2E96	;Starting ARAM location of song-specific sound effect table
+sample_table		= $3100	;Starting ARAM location of BRR sample table
+sample_data		= $3400	;Starting ARAM location of BRR samples
+
+core engine			$04D8-$055F
+audio engine			$0560-$125D
+music data			$1300-$240F
+global sfx data			$2410-$2E93
+track specific sfx data		$2E94-$30FF
+brr sample table		$3100-$33FF
+brr sample data			$3400
+echo buffer			echo_buffer_address = (255 - (echo_delay * 4)) * 256
+
+song data				4368 bytes
+global sfx data				2692 bytes
+track specific sfx data			620 bytes
+sample data/echo buffer			51968 bytes
+
+up to 20 global samples
+up to 172 song specific samples
+up to 96 global sound effects
+up to 32 song specific sound effects

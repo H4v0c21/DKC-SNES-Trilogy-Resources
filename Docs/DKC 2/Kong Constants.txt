@@ -1,0 +1,120 @@
+$FF0040	Diddy
+$FF012A	Dixie
+
+0x0070 | 0x00A1	;00 idle gravity force
+0x0800 | 0x0800	;02 max fall y velocity
+0x005A | 0x0082	;04 jump gravity force
+0x0800 | 0x0800	;06 max fall y velocity holding down?
+0xF7C8 | 0xF623	;08 jump y velocity
+0x0120 | 0x015A	;0A 
+0x0240 | 0x02B3	;0C walk x velocity
+0x0360 | 0x040D	;0E run x velocity
+0x000B | 0x000B	;10 jump x acceleration
+0x000B | 0x000B	;12 walk x acceleration
+0x000B | 0x000B	;14 run x acceleration
+0x0002 | 0x0002	;16 ice walk x acceleration
+0x0005 | 0x0005	;18 ice run x acceleration
+0x0002 | 0x0002	;1A ice idle x acceleration (used for idle on frozen water)
+0x0002 | 0x0002	;1C 
+0x0120 | 0x015A	;1E idle roll x velocity
+0x0360 | 0x040D	;20 walk roll x velocity
+0x0480 | 0x0566	;22 run roll x velocity
+0x003C | 0x0056	;24 death bounce gravity force
+0xFA80 | 0xF966	;26 death first bounce y velocity
+0xFD80 | 0xFD00	;28 death second bounce y velocity
+0xFA80 | 0xF966	;2A hurt bounce y velocity
+0x0400 | 0x04CD	;2C hurt run x velocity
+0x0100 | 0x0100	;2E glide max fall y velocity (downward velocity)
+0xFF00 | 0xFF00	;30 glide y velocity (upward velocity)
+0x000D | 0x000B	;32 roll gravity delay timer (used when rolling off ledges)
+0x0C00 | 0x0E66	;34 thrown object forward x velocity
+0xFF00 | 0xFECD	;36 thrown object forward y velocity
+0x0200 | 0x0266	;38 thrown object upward x velocity
+0xF800 | 0xF666	;3A thrown object upward y velocity
+0x0C80 | 0x0F00	;3C thrown kong forward x velocity (for other kong)
+0xFE00 | 0xFD9A	;3E thrown kong forward y velocity (for other kong)
+0x0000 | 0x0000	;40 thrown kong upward x velocity (for other kong)
+0xF840 | 0xF6B3	;42 thrown kong upward y velocity (for other kong)
+0x0040 | 0x005C	;44 team thrown upward gravity force
+0x0200 | 0x0266	;46 team thrown upward x velocity (when steering kong in air)
+0x000A | 0x000A	;48 team thrown upward x acceleration (when steering kong in air)
+0x0050 | 0x0073	;4A barrel cannon shoot gravity force
+0x0004 | 0x0004	;4C barrel cannon shoot x acceleration
+0x0180 | 0x01CD	;4E steerable barrel cannon move velocity
+0x000A | 0x000B	;50 steerable barrel cannon move acceleration
+0x0300 | 0x0433	;52 rotatable barrel cannon rotation speed
+0x01C0 | 0x021A	;54 up single rope climb y velocity
+0x02C0 | 0x034D	;56 down single rope climb y velocity
+0x02C0 | 0x034D	;58 up single rope climb y velocity (holding y)
+0x03C0 | 0x0480	;5A down single rope climb y velocity (holding y)
+0x01C0 | 0x021A	;5C up double rope climb 
+0x02C0 | 0x034D	;5E down double rope climb 
+0x02C0 | 0x034D	;60 up double rope climb (holding y)
+0x03C0 | 0x0480	;62 down double rope climb (holding y)
+0x0240 | 0x02B3	;64 horizontal rope climb x velocity
+0x0380 | 0x0433	;66 horizontal rope climb x velocity (holding y)
+0xFF60 | 0xFF40	;68 updraft y velocity (holding up)
+0x0060 | 0x0073	;6A updraft y velocity (holding down)
+0x0200 | 0x0266	;6C updraft x velocity
+0x0003 | 0x0004	;6E updraft acceleration
+0xFE00 | 0xFD9A	;70 swim up y velocity
+0xFD40 | 0xFCB3	;72 swim up y velocity (holding up)
+0xFF00 | 0xFECD	;74 swim up y velocity (holding down)
+0x000C | 0x0011	;76 swim gravity force
+0x0140 | 0x0180	;78 swim down y velocity
+0x0240 | 0x02B3	;7A swim down y velocity (holding down)
+0x0180 | 0x01CD	;7C swim x velocity
+0x0280 | 0x0300	;7E swim x velocity (holding y)
+0x00C0 | 0x00E6	;80 squawks max fall y velocity (transformed)
+0x0480 | 0x0566	;82 squawks max fall y velocity (transformed holding down)
+0xFD80 | 0xFD00	;84 squawks flap y velocity (transformed)
+0x0003 | 0x0004	;86 squawks x acceleration (transformed)
+0x0010 | 0x0010	;88 squitter web shot delay
+0x0003 | 0x0003	;8A squitter max web shots
+0x0400 | 0x04CD	;8C squitter web shot x velocity
+0xFFEE | 0xFFEA	;8E squitter web shot up y velocity
+0x0012 | 0x0016	;90 squitter web shot down y velocity
+0x0200 | 0x0266	;92 squitter web platform x velocity
+0xFFF2 | 0xFFEF	;94 squitter web platform up y velocity
+0x000E | 0x0011	;96 squitter web platform down y velocity
+0xF600 | 0xF400	;98 rattly super jump y velocity
+0x0070 | 0x00A1	;9A squitter idle gravity force
+0x005C | 0x0084	;9C rattly idle gravity force
+0x0010 | 0x0017	;9E squawks idle gravity force
+0x0070 | 0x00A1	;A0 rambi idle gravity force
+0x0070 | 0x00A1	;A2 enguarde idle gravity force
+0x0800 | 0x0800	;A4 squitter max fall y velocity
+0x0800 | 0x0800	;A6 rattly max fall y velocity
+0x0280 | 0x0300	;A8 squawks max fall y velocity
+0x0800 | 0x0800	;AA rambi max fall y velocity
+0x0800 | 0x0800	;AC enguarde max fall y velocity
+0x0048 | 0x0068	;AE squitter jump gravity force
+0x0036 | 0x004E	;B0 rattly jump gravity force
+0x0028 | 0x003A	;B2 squawks gravity force (holding down)
+0x0048 | 0x0068	;B4 rambi gravity jump force
+0x0048 | 0x0068	;B6 
+0x0800 | 0x0800	;B8 
+0x0800 | 0x0800	;BA 
+0x0380 | 0x0433	;BC squawks max fall y velocity (holding down)
+0x0800 | 0x0800	;BE 
+0x0800 | 0x0800	;C0 
+0xF870 | 0xF6ED	;C2 squitter jump y velocity
+0xF870 | 0xF6ED	;C4 rattly jump y velocity
+0xFE80 | 0xFE33	;C6 squawks flap y velocity (riding/castle crush)
+0xF900 | 0xF79A	;C8 rambi jump y velocity
+0xF900 | 0xF79A	;CA 
+0x0220 | 0x028D	;CC squitter walk x velocity
+0x0200 | 0x0266	;CE rattly walk x velocity
+0x0300 | 0x039A	;D0 squawks walk x velocity
+0x0200 | 0x0266	;D2 rambi walk x velocity
+0x0200 | 0x0266	;D4 
+0x0340 | 0x03E6	;D6 squitter run x velocity
+0x0300 | 0x039A	;D8 rattly run x velocity
+0x0480 | 0x0566	;DA squawks run x velocity
+0x0300 | 0x039A	;DC rambi run x velocity
+0x0300 | 0x039A	;DE 
+0x0009 | 0x000A	;E0 squitter x acceleration
+0x000A | 0x000B	;E2 rattly x acceleration
+0x0002 | 0x0003	;E4 squawks x acceleration (riding)
+0x0007 | 0x0008	;E6 rambi x acceleration
+0x0007 | 0x0008	;E8 

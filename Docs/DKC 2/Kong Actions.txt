@@ -1,0 +1,41 @@
+	
+This address contains the current action that the player is preforming. Current known values include:
+00- Player is on the ground
+01- Player has jumped
+02- Cartwheel Stop
+03- Cartwheel
+04- Lose a life
+05- Ducking
+06- Debug Fly
+07- Player is riding Rambi/Rattly
+08- Player jumped with Rambi/Rattly
+09- Holding a barrel
+0A- Throwing a barrel
+0B- 
+0C- Used in stun like states(hit by Klobber, monkey thrown in air, charging with Rambi, etc)
+0D- Used in directional blast barrels
+0E- In a barrel (Transformation barrel, blast barrel, cannon etc)
+0F- Stacked monkeys
+10- Jump with stacked monkeys
+11- Throw a monkey
+12- Used when starting a throw
+13- Climbing on a rope
+14- Holding two ropes
+15- Hanging down from a rope
+16- Hanging from a hook
+17- Swimming in water
+18- On a honey wall
+19- Standing in honey
+1A- Held by a purple squawks
+1B- Held by a green(normal) squawks
+1C- Unused climbing state?
+1D- Being spun by cat `o nine tails
+1E- Riding Enguarde
+1F- Stunned and can't move (Such as from Klubba or K. Rool gas)
+20- On a Skull cart
+21- Being blown up by wind
+22- Enguarde on land
+23- Waiting for co-op player
+24- Carrying an object while stuck on honey
+25- Charging with Rambi
+26- Charge attack with Enguarde

@@ -1,0 +1,12 @@
+$20,x	x direction
+$22,x	y direction
+$24,x	x distance
+$26,x	y distance
+$28,x	half of largest distance
+$2A,x	closest distance
+$2C,x	speed
+
+$48,x	current kong x
+$4A,x	current kong y
+
+$0650	fireball speed

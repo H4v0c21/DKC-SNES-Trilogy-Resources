@@ -1,0 +1,92 @@
+$00D9	word	clipping left
+$00DB	word	clipping top
+$00DD	word	clipping right
+$00DF	word	clipping bottom
+
+$00E1	word	clipping left
+$00E3	word	clipping top
+$00E5	word	clipping right
+$00E7	word	clipping bottom
+
+$00EB	word	and against $30,x, if no bits survive return from collision check
+
+
+
+Collision RAM:
+		left	top	right	bottom
+main kong	$09A3	$09A5	$09A7	$09A9
+main animal	$09AB	$09AD	$09AF	$09B1
+main kong	$09B3	$09B5	$09B7	$09B9
+thrown kong	$09BB	$09BD	$09BF	$09C1
+thrown kong	$09C3	$09C5	$09C7	$09C9
+thrown kong	$09CB	$09CD	$09CF	$09D1
+sprite		$09D3	$09D5	$09D7	$09D9
+animal		$09DB	$09DD	$09DF	$09E1
+sprite		$09E3	$09E5	$09E7	$09E9
+kong on animal	$09EB	$09ED	$09EF	$09F1
+
+$09F3	word	
+$09F5	word	Flags for if a sprite collision occurred
+$9F7	word	Flags for how colliding sprites can defeat/interact with each other
+$9F9	long	Collision routine address
+$9FC	word	Platform sprite table next free slot index (increments in 5s)
+$9FE	8*5	Platform sprite table, each entry is 5 bytes total, first 3 bytes are a pointer to the sprite's special platform code that runs once all other sprites are processed. Last 2 bytes are the address of the sprite in RAM
+
+$A26	word	Leftmost x position of standable sprite
+$A28	word	Rightmost x position of standable sprite
+$A2A	word	X position of player
+$A2C	word	Y position of player
+
+
+
+Collision Routines:
+CODE_BCFC40	check for collision with special hitbox?
+CODE_BCFC59	get special hitbox clipping?
+CODE_BCFCA5	check for collision with inactive kong?
+
+CODE_BEBE8B	takes damage flags as param in A
+CODE_BEBE8E	same as CODE_BEBE8B but also takes Y as a param
+CODE_BEBE14	takes damage flags for thrown sprite in A
+CODE_BEBE6D	checks for collision with player?
+
+
+
+Sprite Collision Flags:
+
+word	bit	description
+0001	00	below kill
+0002	01	below bonk
+0004	02	below none
+0008	03	above kill
+0010	04	above bonk
+0020	05	side kill
+0040	06	side bonk
+0080	07	front kill
+0100	08	not found yet
+0200	09	not found yet
+0400	10	any kill (team) (if both are set then bonk?)
+0800	11	any kill (team) (if both are set then bonk?)
+1000	12	side kill (animal)
+2000	13	side bonk (animal)
+4000	14	above kill (animal)
+8000	15	above bonk (animal)
+
+Thrown Sprite Collision Flags:
+
+word	bit	description
+0001	00	not found yet
+0002	01	not found yet
+0004	02	not found yet
+0008	03	thrown kill (held object thrown at sprite)
+0010	04	carry kill (running into sprite with held object)
+0020	05	not found yet
+0040	06	not found yet
+0080	07	not found yet
+0100	08	unknown
+0200	09	not found yet
+0400	10	not found yet
+0800	11	not found yet
+1000	12	not found yet
+2000	13	not found yet
+4000	14	not found yet
+8000	15	not found yet

@@ -1,0 +1,29 @@
+camera unlock trigger spawn scripts:
+DATA_FFD8E0	;0D7E	squawks shaft
+DATA_FFD8F2	;0D80	lava lagoon
+DATA_FFD904	;0D82	unused?
+DATA_FFD916	;0D84	unused?
+DATA_FFD928	;0D86	unused?
+DATA_FFD93A	;0D88	unused?
+DATA_FFD94C	;0D8A	unused?
+DATA_FFD95E	;0D8C	glimmers galleon
+DATA_FFD970	;0D8E	glimmers galleon
+DATA_FFD982	;0D90	glimmers galleon
+DATA_FFD994	;0D92	arctic abyss
+DATA_FFD9A6	;0D94	chain-link chamber
+DATA_FFD9B8	;0D96	chain-link chamber
+DATA_FFD9CA	;0D98	toxic tower
+DATA_FFD9DC	;0D9A	toxic tower
+DATA_FFD9EE	;0D9C	toxic tower
+DATA_FFDA00	;0D9E	animal antics enguarde section
+DATA_FFDA12	;0DA0	animal antics squawks section
+DATA_FFDA24	;0DA2	squawks shaft
+DATA_FFDA36	;0DA4	windy well
+DATA_FFDA48	;0DA6	windy well
+DATA_FFDA5A	;0DA8	windy well
+DATA_FFDA6C	;0DAA	windy well
+DATA_FFDA7E	;0DAC	windy well
+DATA_FFDA90	;0DAE	windy well
+DATA_FFDAA2	;0DB0	unused?
+DATA_FFDAB4	;0DB2	squawks shaft
+DATA_FFDAC6	;0DB4	windy well (1.1 only)

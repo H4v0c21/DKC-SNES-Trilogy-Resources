@@ -1,0 +1,54 @@
+00,x	word	sprite number
+02,x	word	render order
+04,x	byte	unused
+05,x	byte	x position sub-pixel
+06,x	byte	x position pixel
+07,x	byte	x position screen
+08,x	byte	unused
+09,x	byte	y position sub-pixel
+0A,x	byte	y position pixel
+0B,x	byte	y position screen
+0C,x	word	y position of potential terrain tile
+0E,x	word	y distance from potential terrain tile
+10,x	word	terrain tile attributes (slope steepness, flipped, semi-solid, damage player, etc)
+12,x	word	oam render properties (flip, palette, tile)
+14,x	word	mirror of render order (02,x)
+16,x	word	last rendered sprite graphic
+18,x	word	current sprite graphic mirror
+1A,x	word	current sprite graphic
+1C,x	word	visibility
+1E,x	word	terrain tile interaction flags (flags for if object is touching sides or top of tile)
+20,x	word	current x velocity
+22,x	word	x position mirror (only on platform sprites)
+24,x	word	current y velocity
+26,x	word	target x velocity
+28,x	word	y position mirror (only on platform sprites)
+2A,x	word	target y velocity
+2C,x	word	slip velocity
+2D,x	byte	sprite state related?
+2E,x	byte	sprite state
+2F,x	byte	sprite sub state (passed into the routine called by $2E,x via A register)
+30,x	word	sprite interaction flags
+32,x	word	sprite carry flags/defeated flag (0x0100)
+34,x	
+36,x	word	animation number
+38,x	word	animation frame draw time
+3A,x	word	animation speed
+3C,x	word	animation script pointer
+3E,x	word	animation subroutine pointer
+40,x	word	animation format?
+42,x	word	general purpose
+44,x	word	general purpose
+46,x	word	general purpose
+48,x	word	general purpose
+4A,x	word	general purpose
+4C,x	word	general purpose
+4E,x	word	general purpose
+50,x	word	general purpose
+52,x	byte	movement state
+53,x	byte	movement sub state
+54,x	word	sprite constants pointer
+56,x	word	number in level's sprite list
+58,x	word	spawn parameter (set in level's sprite list)
+5A,x	word	offscreen despawn timer
+5C,x	word	unused?

@@ -1,0 +1,16 @@
+0000	$??????
+0001	$BBB3F0	no object data for level
+0002	$BB8A89	out of cgram for sprite palettes
+0003	$BB8361	sprite vram related?
+0004	$BB83EA	large sprite graphic vram slot mismatch (both slots need the same sprite index if sprite is large)
+0005	$80882C	no vblank
+0006	$BB8327	out of vram for sprite graphics
+0007	$BB82AE	out of sprite ram
+0009	$BBC121	too many level destinations (attempted to index destination out of bounds)
+000A	$BBC138	no level destination
+000B	$BBC0FE	too many level exit things?
+000C	$??????	
+000D	$BBB705	
+000E	$??????	
+000F	$808FF6	overflow into internal header
+0010	$BBAE45	failed to parse init script command?

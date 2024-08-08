@@ -1,0 +1,128 @@
+00	on ground
+01	falling
+02	roll start
+03	roll fast
+04	roll stop
+05	death
+06	jumping
+07	crouching
+08	debug fly
+09	animal on ground
+0A	animal falling
+0B	animal jumping
+0C	carrying object on ground
+0D	carrying object falling
+0E	carrying object jumping
+0F	throwing object
+10	squawks idle
+11	in barrel cannon
+12	shot from barrel cannon
+13	team bottom start
+14	sliding against steep slope
+15	knock back
+16	bounce off enemy
+17	team idle bottom
+18	team idle top
+19	roll through enemy
+1A	team falling bottom
+1B	team jumping bottom
+1C	team bounce off enemy
+1D	npc screen main kong
+1E	npc screen alt kong
+1F	team thrown sideways top
+20	team thrown sideways bottom
+21	team thrown stunned top
+22	follow main kong
+23	team throwing bottom
+24	hurt
+25	hurt flee
+26	hurt wait for transition to main kong
+27	hurt transition to main kong
+28	hurt jump off screen
+29	team retrieve top
+2A	follow main kong fast
+2B	team throw up top
+2C	team throw up bottom
+2D	none
+2E	main kong move to follow kong after throw
+2F	follow thrown into barrel cannon/spinning from cat o'9 tails
+30	team throw onto hook
+31	follow in barrel cannon
+32	follow entering barrel cannon
+33	level end run
+34	level end exit
+35	on single rope
+36	rope transition
+37	on double rope
+38	on horizontal rope
+39	jumping down from hook
+3A	dying as animal
+3B	dying off screen
+3C	on hook
+3D	swimming
+3E	free from dk barrel
+3F	thrown object
+40	team top start
+41	stuck on honey wall
+42	jumping from honey wall
+43	stuck on honey floor
+44	quawks drop start
+45	on rope object
+46	hit level target
+47	celebrate
+48	spinning from cat o'9 tails
+49	swap to start
+4A	swap from start
+4B	swap to walk
+4C	swap to stop
+4D	swap from air
+4E	swap from stop
+4F	rambi charge
+50	enguarde idle
+51	enguarde attack
+52	enguarde charge
+53	rambi charge start
+54	enguarde charge start
+55	krockhead bounce start
+56	bounce off tire/krockhead
+57	animal attack start
+58	
+59	hurt fall off squawks
+5A	hurt while affected by red/purple gas/meleed by k.rool
+5B	riding skull cart
+5C	follow riding skull cart
+5D	frozen by blue gas
+5E	follow hit level target
+5F	follow level end run
+	60	animal jumping/falling related?
+61	rattly super jump start
+62	rattly super jump
+63	stunned by kudgel
+64	collect kremcoin
+65	bonus run off screen
+66	room transition
+67	jumping out of skull cart
+68	bouncing out of skull cart
+69	wind float
+6A	hurt by target terror door
+6B	dying from target terror door
+6C	enguarde on land
+6D	jumping down from horizontal rope
+6E	jumping up from horizontal rope
+6F	wait for other player to take over
+70	exit room on skull cart
+71	
+72	hurt by klubba from "fight him"
+73	stronghold showdown cutscene
+74	cutscene
+75	cutscene move
+76	team top stop
+77	swimming swap from
+78	swimming swap to
+79	
+7A	carrying item while stuck on honey floor
+7B	cutscene boss defeated
+7C	cutscene k.rool defeated
+7D	wait for other player to take over on skull cart
+7E	team bottom stop
+7F	wait for other player to take over after hurt from target terror door in air

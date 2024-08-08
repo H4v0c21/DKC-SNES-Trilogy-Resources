@@ -1,0 +1,30 @@
+kleever ram map:
+
+$06EF	number of fragments left to spawn
+$06F1	fragment spawn data index
+
+
+k. rool ram map:
+
+$0650	some sort of x offset?
+$0652	k. rool hp
+$0654	k. rool sprite
+$0656	k. rool blunderbuss sprite
+$0658	some sort of y offset?
+$065A	command sequence loop address
+
+$0721	wait timer
+
+$0727	shots left to fire in sequence
+$0729	shot wait timer
+
+$072B	blunderbuss fire boost sprite
+$072D	vacuum timer
+
+$0733	k. rool soot eyes sprite
+$0735	carryable cannon ball sprite
+$0737	pointer to shot data in bank BA
+
+$075B	donkey rope sprite
+
+$075F	donkey sprite

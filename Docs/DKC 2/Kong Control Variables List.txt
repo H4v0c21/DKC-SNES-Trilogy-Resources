@@ -1,0 +1,22 @@
+$16B2	Diddy
+$16D8	Dixie
+
+00,x	Animation number (no kong offset)
+02,x	Copy of $983 active player input (1 frame press)
+04,x	Copy of $981 active player input
+06,x	Fast movement flag (usually set by Y button but also by left/right sometimes)
+08,x	Gravity force
+0A,x	Max fall y velocity
+0C,x	Unknown
+0E,x	Roll x velocity
+10,x	Last roll time (copied from active frame counter when roll starts)
+12,x	Last jump time (copied from active frame counter when jump starts)
+14,x	Invincibility timer (used to visually flash player after being hit)
+16,x	Invincibility timer
+18,x	Copy of button input when Y button is pressed
+1A,x	Most Recent Y press time (copied from active frame counter when Y is pressed) (used to check glide/roll cooldown)
+1C,x	Previous Y press time (copied from previous Y press time when Y is pressed)
+1E,x	Most Recent Y release time (copied from active frame counter when Y is released)
+20,x	Previous Y release time (copied from previous Y release time when Y is released)
+22,x	Last jump attempt time (copied from active frame counter when jump action is called)
+24,x	Roll gravity delay time

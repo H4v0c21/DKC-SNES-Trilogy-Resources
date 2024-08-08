@@ -1,0 +1,23 @@
+
+Necky hover/idle (this is how non-circular zingers and flitters move too):
+wait for swoop timer to be at 0
+if necky gets too far from his home position invert the move velocity for the axis on which he deviated too far sending him back towards home
+
+variables:
+$42,x	home x position (pixel position)
+$44,x	home y position (pixel position)
+$46,x	home deviation (right) (pixel position)
+$47,x	home deviation (left) (pixel position)
+$48,x	move velocity (x) (sub pixels per frame)
+$4A,x	home deviation (down) (pixel position)
+$4B,x	home deviation (up) (pixel position)
+$4C,x	move velocity (y) (sub pixels per frame)
+$4E,x	time before swoop (frames)
+
+when swoop timer hits 0:
+set current x velocity to 0x0100 (256 sub pixels per frame)
+set current y velocity to 0xFF80 (-128 sub pixels per frame)
+set target x velocity to 0xFC40 (-960 sub pixels per frame)
+set target y velocity to 0xFF80 (-128 sub pixels per frame)
+
+blend from current to target using standard DKC 2 velocity interpolation

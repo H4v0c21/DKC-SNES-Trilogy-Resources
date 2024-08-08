@@ -1,0 +1,95 @@
+808000	;> engine core
+
+C00000	;\ sprite graphics
+C10000	; |
+C20000	; |
+C30000	; |
+C40000	; |
+C50000	; |
+C60000	; |
+C70000	; |
+C80000	; |
+C90000	; |
+CA0000	; |
+CB0000	; |
+CC0000	; |
+CD0000	; |
+CE0000	; |
+CF0000	; |
+D00000	; |
+D10000	; |
+D20000	; |
+D30000	; |
+D40000	; |
+D50000	; |
+D60000	; |
+D70000	; |
+D80000	; |
+D90000	; |
+DA0000	; |
+DB0000	; |
+DC0000	; |
+DD0000	; |
+DE0000	; |
+DF0000	; |
+E00000	; |
+E10000	; |
+E20000	; |
+E30000	; |
+E40000	; |
+E50000	; |
+E60000	; |
+E70000	; |
+E80000	; |
+E90000	; |
+EA0000	; |
+EB0000	; |
+EC0000	; |
+ED0000	;/
+
+EE0000	;\ audio engine (APU side)/songs/sound effects/sound samples
+EF0000	; |
+F00000	; |
+F10000	; |
+F20000	;/
+
+F30000	;> background graphics
+B38000	;> sprite code
+
+F40000	;> background graphics
+B48000	;> world map code/level names/world map paths
+
+F50000	;> background graphics
+B58000	;> audio engine (CPU side)
+B59C00	;> level code
+
+F60000	;> background graphics
+B68000	;> sprite code
+
+F70000	;> dialog text
+
+F80000	;> background graphics
+B88000	;> kong code
+
+F90000	;> animation scripts
+F99400	;> background graphics
+B9D000	;> animation code
+
+FA0000	;> background graphics
+BA9000	;> code
+BAD000	;> menu text
+
+FB0000	;> background graphics
+BB8000	;> code
+BBE800	;> sprite spawn script table
+
+FC0000	;> misc sprite graphics/terrain collision maps
+BC8000	;> sprite graphics table/sprite hitboxes
+BCFA00	;> sprite collision code
+
+FD0000	;> palettes/vram payloads/ppu setting scripts/banana level placements/ camera level placements/level settings/level styles/klank scripts
+
+FE0000	;> sprite level placements/demo movies
+BEB800	;> sprite code
+
+FF0000	;> sprite spawn scripts

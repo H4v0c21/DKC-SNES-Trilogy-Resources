@@ -1,0 +1,10 @@
+$059D	Destination number (index into list of possible destination level numbers for the level)
+$059F	Destination level entrance number
+$05A1	X position where the kong triggers a level fadeout
+$05A3	Return level number
+$05A5	Return level entrance number
+
+$08A8	Main level number (only updated when entering a level from the map screen)
+$08C8	Copied from Main level number when exiting level
+
+$0A84	Exit wall sprite?
