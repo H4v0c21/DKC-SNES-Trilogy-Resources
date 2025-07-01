@@ -6,5 +6,3 @@ $05A5	Return level entrance number
 
 $08A8	Main level number (only updated when entering a level from the map screen)
 $08C8	Copied from Main level number when exiting level
-
-$0A84	Exit wall sprite?

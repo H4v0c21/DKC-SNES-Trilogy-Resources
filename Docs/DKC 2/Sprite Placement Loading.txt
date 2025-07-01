@@ -1,0 +1,19 @@
+$0B9A	Holds a pointer to $5A12 + some offset stored at $5A12 itself (the offset is probably the size of the data and it's getting the end of the data) This data it's pointing to appears to be an array of 16 bit pointers 0x40 bytes total. Each seems to point to a vector of ids or something, terminated with 0000.
+
+
+$0B88	some level shape thing, ORd against (Y screen * 8)
+$0B8A	some other level shape thing, stored around the same time as $0B88
+
+$0B98	holds the placement number for the sprite the game is currently trying to assign a group to on level load
+$0B9A	pointer to spawning group table
+$0B9C	holds the sprite/sprite status of the sprite that is attempting to spawn
+
+$0BA6	an array of positions? something to do with sprite spawning
+
+spawning group table is 0x40 bytes, it contains an array of pointers to spawning group lists
+spawning group lists terminate with 0000, they contain a list of every sprite placement number that is assigned to the respective spawning group. Each spawning group has its own list for a total of 0x20.
+
+$5A12
+
+$7A12	1024 bytes	level sprite tracker, indexes using a sprites placement number to keep track of what slot it's in via a pointer to the sprite if it exists on screen to prevent it from spawning multiple times. The sprite pointer is set negative if the sprite dies or should no longer spawn and is reset to 0 if they went off screen and should respawn if their area is entered again.
+$7E12	512 bytes	temporary location used to store grouped sprites as they're found on level load. Each group id is reserved 8 slots each (16 bytes) for a total of 512 bytes (32 groups)

@@ -1,0 +1,12 @@
+$00	word	graphics init routine index
+$02	word	HDMA init routine index
+$04	word	music track index
+$06	word	palette address (0 to inherit default palette)
+$08	word	terrain slope init routine pointer (bank BB)
+$0A	word	level init routine pointer (bank BB)
+$0C	byte	ppu setting script index
+$0D	byte	vram upload script index
+$0E	word	level nmi routine index
+$10	word	level logic routine index
+$12	byte	32x32 tilemap index
+$13	word	level effect flags

@@ -1,0 +1,18 @@
+Kong State Flags:
+
+bit 0 (0001)		flag state as generic hurt state, prevents a lot of things that shouldn't happen when hurt or dying
+bit 1 (0002)		flag state as generic cart state, allows using exit walls via skull cart
+bit 2 (0004)		flag state as not being controlled by player, shouldn't trigger exits or be affected by being stunned/upwards wind
+bit 3 (0008)		flag state as not allowed to mount enguarde/squawks
+bit 4 (0010)		flag state as follower kong being unable to swap
+bit 5 (0020)		flag state as not allowed to team up/stop team up or mount animal buddies, also collision related
+bit 6 (0040)		flag state as not allowing bonks from klobber and damage from kreepy krow eggs
+bit 7 (0080)		flag state as not allowing hook interaction, only used for the bottom kong team throwing upward
+bit 8 (0100)		unknown?
+bit 9 (0200)		unused?
+bit 10 (0400)		unused?
+bit 11 (0800)		unused?
+bit 12 (1000)		unused?
+bit 13 (2000)		unused?
+bit 14 (4000)		unused?
+bit 15 (8000)		unused?
