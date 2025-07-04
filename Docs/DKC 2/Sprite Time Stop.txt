@@ -1,0 +1,22 @@
+DKC 2 Time Stop:
+
+$0A36	time stop flags
+$0A38	time stop timer
+
+
+bit 0 (0001)	
+bit 1 (0002)	
+bit 2 (0004)	if set then all non-kong sprites won't process
+bit 3 (0008)	if set then the active kong won't process
+bit 4 (0010)	if set then the inactive kong won't process
+bit 5 (0020)	
+bit 6 (0040)	
+bit 7 (0080)	if set then don't process any sprites
+bit 8 (0100)	
+bit 9 (0200)	
+bit 10 (0400)	
+bit 11 (0800)	
+bit 12 (1000)	
+bit 13 (2000)	
+bit 14 (4000)	
+bit 15 (8000)	
