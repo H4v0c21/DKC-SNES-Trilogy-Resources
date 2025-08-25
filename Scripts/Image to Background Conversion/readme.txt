@@ -1,5 +1,5 @@
 DISCLAIMER:
-This process requires that you know how to safely write binary data to your ROM manually. If any of the words listed below scareyou then you're probably not ready to do this:
+This process requires that you know how to safely write binary data to your ROM manually. If any of the words listed below scare you then you're probably not ready to do this:
 
 Data compression
 Addresses/Pointers
