@@ -94,7 +94,7 @@ word	description
 0002	just released carry
 0003	not found yet
 0004	thrown forward
-0005	dropping from damage
+0005	dropping from damage/bounce
 0006	thrown up
 
 if bit 8 (0x0100) is set then it defeats the sprite

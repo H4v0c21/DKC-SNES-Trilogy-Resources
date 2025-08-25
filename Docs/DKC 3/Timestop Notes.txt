@@ -1,0 +1,21 @@
+DKC 3 Time Stop:
+
+$194B	time stop flags
+$194D	time stop timer
+
+bit 0 (0x0001)	stop camera
+bit 1 (0x0002)	unknown
+bit 2 (0x0004)	stop non kong sprites
+bit 3 (0x0008)	stop active kong
+bit 4 (0x0010)	stop inactive kong
+bit 5 (0x0020)	stop all sprites
+bit 6 (0x0040)	unknown
+bit 7 (0x0080)	stop all sprites
+bit 8 (0x0100)
+bit 9 (0x0200)
+bit 10 (0x0400)
+bit 11 (0x0800)
+bit 12 (0x1000)
+bit 13 (0x2000)
+bit 14 (0x4000)
+bit 15 (0x8000)
