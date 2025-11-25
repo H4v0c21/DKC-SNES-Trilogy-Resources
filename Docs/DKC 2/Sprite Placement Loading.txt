@@ -1,3 +1,5 @@
+$0A42	0x40 byte table that appears to contain pointers to group manager sprites
+
 $0B9A	Holds a pointer to $5A12 + some offset stored at $5A12 itself (the offset is probably the size of the data and it's getting the end of the data) This data it's pointing to appears to be an array of 16 bit pointers 0x40 bytes total. Each seems to point to a vector of ids or something, terminated with 0000.
 
 

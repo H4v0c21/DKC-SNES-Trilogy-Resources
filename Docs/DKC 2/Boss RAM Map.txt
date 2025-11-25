@@ -17,7 +17,6 @@ $0721	wait timer
 
 $0727	shots left to fire in sequence
 $0729	shot wait timer
-
 $072B	blunderbuss fire boost sprite
 $072D	vacuum timer
 

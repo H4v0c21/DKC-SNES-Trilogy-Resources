@@ -1,41 +1,33 @@
-$00D9	word	clipping left
-$00DB	word	clipping top
-$00DD	word	clipping right
-$00DF	word	clipping bottom
-
-$00E1	word	clipping left
-$00E3	word	clipping top
-$00E5	word	clipping right
-$00E7	word	clipping bottom
 
 $00EB	word	and against $30,x, if no bits survive return from collision check
 
+Temp Clipping RAM		left	top	right	bottom
+[0] 				$00D9	$00DB	$00DD	$00DF
+[1] 				$00E1	$00E3	$00E5	$00E7
 
-
-Collision RAM:
-		left	top	right	bottom
-main kong	$09A3	$09A5	$09A7	$09A9
-main animal	$09AB	$09AD	$09AF	$09B1
-main kong	$09B3	$09B5	$09B7	$09B9
-thrown kong	$09BB	$09BD	$09BF	$09C1
-thrown kong	$09C3	$09C5	$09C7	$09C9
-thrown kong	$09CB	$09CD	$09CF	$09D1
-sprite		$09D3	$09D5	$09D7	$09D9
-animal		$09DB	$09DD	$09DF	$09E1
-sprite		$09E3	$09E5	$09E7	$09E9
-kong on animal	$09EB	$09ED	$09EF	$09F1
+Sprite Clipping RAM		left	top	right	bottom
+[0] main kong			$09A3	$09A5	$09A7	$09A9
+[1] main animal			$09AB	$09AD	$09AF	$09B1
+[2] main kong			$09B3	$09B5	$09B7	$09B9
+[3] thrown kong			$09BB	$09BD	$09BF	$09C1
+[4] thrown kong			$09C3	$09C5	$09C7	$09C9
+[5] thrown kong			$09CB	$09CD	$09CF	$09D1
+[6] sprite			$09D3	$09D5	$09D7	$09D9
+[7] animal			$09DB	$09DD	$09DF	$09E1
+[8] sprite			$09E3	$09E5	$09E7	$09E9
+[9] animal mount (dummy kong)	$09EB	$09ED	$09EF	$09F1
 
 $09F3	word	
 $09F5	word	Flags for if a sprite collision occurred
-$9F7	word	Flags for how colliding sprites can defeat/interact with each other
-$9F9	long	Collision routine address
-$9FC	word	Platform sprite table next free slot index (increments in 5s)
-$9FE	8*5	Platform sprite table, each entry is 5 bytes total, first 3 bytes are a pointer to the sprite's special platform code that runs once all other sprites are processed. Last 2 bytes are the address of the sprite in RAM
+$09F7	word	Flags for how colliding sprites can defeat/interact with each other
+$09F9	long	Collision routine address
+$09FC	word	Platform sprite table next free slot index (increments in 5s)
+$09FE	8*5	Platform sprite table, each entry is 5 bytes total, first 3 bytes are a pointer to the sprite's special platform code that runs once all other sprites are processed. Last 2 bytes are the address of the sprite in RAM
 
-$A26	word	Leftmost x position of standable sprite
-$A28	word	Rightmost x position of standable sprite
-$A2A	word	X position of player
-$A2C	word	Y position of player
+$0A26	word	Leftmost x position of standable sprite
+$0A28	word	Rightmost x position of standable sprite
+$0A2A	word	X position of player
+$0A2C	word	Y position of player
 
 
 
@@ -52,13 +44,12 @@ CODE_BEBE6D	checks for collision with player?
 
 
 Sprite Collision Flags:
-
 word	bit	description
 0001	00	below kill
 0002	01	below bonk
 0004	02	below none
-0008	03	above kill
-0010	04	above bonk
+0008	03	enable attacks from above
+0010	04	enable bonks from above (with attacks disabled bonks won't happen unless animation flag 0x1000 permits it)
 0020	05	side kill
 0040	06	side bonk
 0080	07	front kill
@@ -72,7 +63,6 @@ word	bit	description
 8000	15	above bonk (animal)
 
 Thrown Sprite Collision Flags:
-
 word	bit	description
 0001	00	not found yet
 0002	01	not found yet

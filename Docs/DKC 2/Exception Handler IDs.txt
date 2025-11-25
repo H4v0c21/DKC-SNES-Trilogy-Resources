@@ -6,6 +6,7 @@
 0005	$80882C	no vblank
 0006	$BB8327	out of VRAM for sprite graphics
 0007	$BB82AE	out of sprite memory
+0008	$??????
 0009	$BBC121	too many level destinations (attempted to index destination out of bounds)
 000A	$BBC138	no level destination
 000B	$BBC0FE	too many level exit things?

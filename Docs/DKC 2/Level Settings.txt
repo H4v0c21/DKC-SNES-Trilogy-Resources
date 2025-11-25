@@ -7,7 +7,7 @@ $02	2 bytes	pointer to level style config
 $04	1 byte	map number (which section of the levels tile map should be used)
 $05	1 byte	unknown parameter
 $06	1 byte	unknown parameter
-$07	1 byte	unknown parameter
+$07	1 byte	unknown parameter/start level with animal?
 $08	1 byte	something to do with camera positioning
 $09	1 byte	something to do with camera positioning
 $0A	1 byte	camera control

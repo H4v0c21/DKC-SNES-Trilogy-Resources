@@ -1,11 +1,11 @@
 	
 This address contains the current action that the player is preforming. Current known values include:
-00- Player is on the ground
-01- Player has jumped
-02- Cartwheel Stop
-03- Cartwheel
+00- Grounded
+01- Airborne
+02- Roll Stop
+03- Rolling
 04- Lose a life
-05- Ducking
+05- Crouching
 06- Debug Fly
 07- Player is riding Rambi/Rattly
 08- Player jumped with Rambi/Rattly
