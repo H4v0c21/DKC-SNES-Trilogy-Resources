@@ -1,4 +1,4 @@
---DKC Trilogy Sprite Debug Script v2.01
+--DKC Trilogy Sprite Debug Script v2.00
 --By: H4v0c21
 --Written for: Mesen 2.1.1
 --Mesen Commit: https://github.com/SourMesen/Mesen2/commit/137ae7ce3bf3f539d007e2c4ef3cb3b6c97672a1
@@ -969,6 +969,10 @@ function SpriteDebug()
 		featureDebugFly = false
 	end
 	
+	if rPress then
+		QueueInGameSoundEffect(0x076F)
+	end
+	
 	isGamePaused = CheckBit(ReadWord(GAME_STATE), 0x0040)
 	
 	if not isGamePaused then
@@ -1118,15 +1122,9 @@ function SpriteDebug()
 				--render sprite hitbox
 				if featureShowSpriteHitboxes then
 					if hitboxNumber == 0 then
-						--only render hitbox if it's a valid size (prevents extreme lag on DKC 3 map screen)
-						if hitboxWidth < 256 and hitboxWidth > -256 and hitboxHeight < 256 and hitboxHeight > -256 then
-							emu.drawRectangle(hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight, spriteBoxColor+0x80000000, true, 1)
-						end
+						emu.drawRectangle(hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight, spriteBoxColor+0x80000000, true, 1)
 					else
-						--only render hitbox if it's a valid size (prevents extreme lag on DKC 3 map screen)
-						if hitboxWidth < 256 and hitboxWidth > -256 and hitboxHeight < 256 and hitboxHeight > -256 then
-							emu.drawRectangle(hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight, spriteBoxColor+0x80000000, false, 1)
-						end
+						emu.drawRectangle(hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight, spriteBoxColor+0x80000000, false, 1)
 					end
 				end
 				
@@ -1254,10 +1252,7 @@ function SpriteDebug()
 					x, y = GetBoxCoordinates(mouseState.x, mouseState.y, hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight)
 					
 					if x ~= nil and y ~= nil then
-						--only render hitbox if it's a valid size (prevents extreme lag on DKC 3 map screen)
-						if hitboxWidth < 256 and hitboxWidth > -256 and hitboxHeight < 256 and hitboxHeight > -256 then
-							emu.drawRectangle(hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight, spriteBoxColor+0x80000000, true, 1)
-						end
+						emu.drawRectangle(hitboxScreenX, hitboxScreenY, hitboxWidth, hitboxHeight, spriteBoxColor+0x80000000, true, 1)
 					end
 				end
 			else

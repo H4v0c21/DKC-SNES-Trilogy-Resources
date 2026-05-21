@@ -124,6 +124,22 @@ function IsMouseInsideBox(mouse_x, mouse_y, box_x, box_y, box_width, box_height)
 end
 
 
+function get_cursor_in_box(cursor_x, cursor_y, box_x, box_y, box_width, box_height)
+	local cursor_local_x = cursor_x - box_x
+	local cursor_local_y = cursor_y - box_y
+	
+	if cursor_local_x >= 0
+	and cursor_local_x < box_width
+	and cursor_local_y >= 0
+	and cursor_local_y < box_height then
+		return cursor_local_x, cursor_local_y
+	else
+		return nil, nil
+	end
+end
+
+
+
 function FindInTable(tbl, value)
 	for i, entry in ipairs(tbl) do
 		v = entry[1]
@@ -360,11 +376,21 @@ function Sprite_Debug()
 				
 				--if left click is pressed and if the mouse is over an object add it to dragged objects
 				if mouse_left_hold == true then
-					if IsMouseInsideBox(mouseState.x, mouseState.y, object_x-camera_x+hitbox_x_offset, object_y-camera_y+hitbox_y_offset+draw_y_offset, hitbox_width, hitbox_height) == true then
-						table.insert(grabbed_objects, object)
+					grabbed_x_offset, grabbed_y_offset = get_cursor_in_box(mouseState.x, mouseState.y, object_x-camera_x+hitbox_x_offset, object_y-camera_y+hitbox_y_offset+draw_y_offset, hitbox_width, hitbox_height)
+					
+					if grabbed_x_offset ~= nil then
+						grabbed_object = object
+						--emu.writeWord(object+0x06, mouseState.x+camera_x+grabbed_x_offset, emu.memType[cpuDebug])
+						--emu.writeWord(object+0x0A, mouseState.y-draw_y_offset+camera_y+grabbed_y_offset, emu.memType[cpuDebug])
+						
+						
+						emu.writeWord(object+0x06, mouseState.x+camera_x+grabbed_x_offset, emu.memType[cpuDebug])
+						emu.writeWord(object+0x0A, mouseState.y-draw_y_offset+camera_y+grabbed_y_offset, emu.memType[cpuDebug])
+						
 					end
 				end
 			end
+			
 			
 			--handle object position freezing
 			if freeze_objects == true then
@@ -426,15 +452,6 @@ function Sprite_Debug()
 					end
 				end
 			end
-		end
-	end
-	
-	
-	--move all dragged objects to mouse position
-	if drag_objects == true then
-		for object = 1, #grabbed_objects do
-			emu.writeWord(grabbed_objects[object]+0x06, mouseState.x+camera_x, emu.memType[cpuDebug])
-			emu.writeWord(grabbed_objects[object]+0x0A, mouseState.y-draw_y_offset+camera_y, emu.memType[cpuDebug])
 		end
 	end
 

@@ -22,10 +22,11 @@ t	tile
 s	semi-solid
 d	damage
 h	h-flip
+r	rope related?
 
 DKC 1	hstt tttt
 DKC 2	hs00 000d 0ttt tttt
-DKC 3	hs00 000d 0ttt tttt
+DKC 3	hsr0 000d 0ttt tttt
 
 Color:
 
